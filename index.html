@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!-- ============================================ -->
+<!-- SECCIÓN: CONFIGURACIÓN INICIAL DE LA PÁGINA   -->
+<!-- ============================================ -->
+<html lang="es">
+<head>
+    <!-- ============================================ -->
+    <!-- META TAGS - Configuración para navegadores    -->
+    <!-- ============================================ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página web de ejemplo compatible con Google Chrome">
+    <meta name="author" content="Tu Nombre">
+    <title>Mi Página Web | Chrome Compatible</title>
+    
+    <!-- ============================================ -->
+    <!-- ENLACE A HOJA DE ESTILOS CSS                  -->
+    <!-- ============================================ -->
+    <link rel="stylesheet" href="css/estilo.css">
+    
+    <!-- ============================================ -->
+    <!-- FUENTE DE GOOGLE (Opcional)                   -->
+    <!-- ============================================ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- ============================================ -->
+    <!-- SECCIÓN: ENCABEZADO PRINCIPAL (HEADER)        -->
+    <!-- Aquí va el logo y la navegación principal     -->
+    <!-- ============================================ -->
+    <header id="header-principal">
+        <div class="contenedor-header">
+            
+            <!-- ---------- LOGO ---------- -->
+            <div class="logo">
+                <h1>Mi Sitio Web</h1>
+            </div>
+            
+            <!-- ---------- MENÚ DE NAVEGACIÓN ---------- -->
+            <nav id="navegacion-principal">
+                <ul class="menu">
+                    <li><a href="#inicio" class="activo">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+                
+                <!-- ---------- BOTÓN MENÚ MÓVIL ---------- -->
+                <button id="btn-menu-movil" class="btn-menu" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- ============================================ -->
+    <!-- SECCIÓN: CONTENIDO PRINCIPAL (MAIN)          -->
+    <!-- ============================================ -->
+    <main>
+        
+        <!-- ========== SECCIÓN HÉROE ========== -->
+        <section id="inicio" class="seccion-heroe">
+            <div class="contenedor-heroe">
+                <h2>Bienvenido a Nuestra Página</h2>
+                <p>Este es un sitio web de ejemplo completamente compatible con Google Chrome y fácil de modificar en Visual Studio.</p>
+                <a href="#contacto" class="boton-cta">Contáctanos Ahora</a>
+            </div>
+        </section>
+        
+        <!-- ========== SECCIÓN NOSOTROS ========== -->
+        <section id="nosotros" class="seccion-nosotros">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Sobre Nosotros</h2>
+                <div class="grid-nosotros">
+                    <div class="texto-nosotros">
+                        <p>Somos un equipo dedicado a crear soluciones web modernas y eficientes. Nuestra experiencia nos permite desarrollar proyectos adaptados a las necesidades de cada cliente.</p>
+                        <p>Trabajamos con tecnologías actuales y seguimos las mejores prácticas de desarrollo para garantizar resultados óptimos.</p>
+                    </div>
+                    <div class="imagen-nosotros">
+                        <div class="placeholder-imagen">
+                            <span>🖼️ Imagen de Nosotros</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ========== SECCIÓN SERVICIOS ========== -->
+        <section id="servicios" class="seccion-servicios">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Nuestros Servicios</h2>
+                <div class="grid-servicios">
+                    
+                    <!-- Tarjeta de Servicio 1 -->
+                    <div class="tarjeta-servicio">
+                        <div class="icono-servicio">💻</div>
+                        <h3>Desarrollo Web</h3>
+                        <p>Creación de sitios web responsivos y modernos utilizando las últimas tecnologías.</p>
+                    </div>
+                    
+                    <!-- Tarjeta de Servicio 2 -->
+                    <div class="tarjeta-servicio">
+                        <div class="icono-servicio">📱</div>
+                        <h3>Diseño Responsivo</h3>
+                        <p>Diseños adaptables a cualquier dispositivo: móvil, tablet y escritorio.</p>
+                    </div>
+                    
+                    <!-- Tarjeta de Servicio 3 -->
+                    <div class="tarjeta-servicio">
+                        <div class="icono-servicio">🔧</div>
+                        <h3>Mantenimiento</h3>
+                        <p>Soporte técnico y actualizaciones para mantener tu sitio siempre al día.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ========== SECCIÓN CONTACTO ========== -->
+        <section id="contacto" class="seccion-contacto">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Contáctanos</h2>
+                <form id="formulario-contacto" class="formulario-contacto">
+                    <div class="campo-formulario">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+                    </div>
+                    <div class="campo-formulario">
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                    </div>
+                    <div class="campo-formulario">
+                        <label for="asunto">Asunto:</label>
+                        <input type="text" id="asunto" name="asunto" placeholder="Asunto del mensaje">
+                    </div>
+                    <div class="campo-formulario">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    </div>
+                    <button type="submit" class="boton-enviar">Enviar Mensaje</button>
+                </form>
+                <div id="mensaje-exito" class="mensaje-exito oculto">
+                    ¡Mensaje enviado con éxito! Te contactaremos pronto.
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <!-- ============================================ -->
+    <!-- SECCIÓN: PIE DE PÁGINA (FOOTER)              -->
+    <!-- ============================================ -->
+    <footer id="footer-principal">
+        <div class="contenedor-footer">
+            <div class="info-footer">
+                <p>&copy; 2024 Mi Sitio Web. Todos los derechos reservados.</p>
+            </div>
+            <div class="redes-sociales">
+                <a href="#" class="red-social" aria-label="Facebook">FB</a>
+                <a href="#" class="red-social" aria-label="Twitter">TW</a>
+                <a href="#" class="red-social" aria-label="Instagram">IG</a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ============================================ -->
+    <!-- SCRIPTS DE JAVASCRIPT                        -->
+    <!-- ============================================ -->
+    <script src="js/script.js"></script>
+</body>
+</html>
